@@ -58,9 +58,10 @@ public class LongClick extends Activity {
 
         /** define view on long click listener */
         final View.OnLongClickListener toolbarItemLongClicked = new View.OnLongClickListener() {
+            int counter;
             @Override
             public boolean onLongClick(View view) {
-                toolbar.setTitle("Toolbar LongClicked");
+                toolbar.setTitle("Toolbar LongClicked: " + ++counter + " time/s");
                 return true;
             }
         };
